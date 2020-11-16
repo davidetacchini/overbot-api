@@ -1,0 +1,63 @@
+GET http://localhost:5000/api/statistics
+
+### 
+
+POST http://localhost:5000/api/statistics
+Content-Type: application/json
+
+{
+    "host": {
+        "Python version": 3.9,
+        "Operating System": "Ubuntu"
+    },
+    "bot": {
+        "Python version": 3.9,
+        "Uptime": "1h:20:10"
+    },
+    "shards": {
+            "id": 1,
+            "ping": 120
+    }
+}
+
+###
+
+GET http://localhost:5000/api/commands
+
+### 
+
+POST http://localhost:5000/api/commands
+Content-Type: application/json
+
+[
+    {
+        "name": "rank",
+        "desc": "returns rank"
+    },
+    {
+        "name": "profile info",
+        "desc": "returns profile information"
+    }
+]
+
+###
+
+GET http://localhost:5000/api/servers
+
+### 
+
+POST http://localhost:5000/api/servers
+Content-Type: application/json
+
+[
+    {
+        "id": "32949035734682043425235",
+        "name": "OverBot",
+        "commands_runned": "100"
+    },
+    {
+        "id": "43967809284092375928479",
+        "name": "Apollo 11",
+        "commands_runned": "120"
+    }
+]
