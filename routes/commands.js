@@ -1,5 +1,5 @@
 import express from 'express';
-import commands from '../models/commands.js';
+import { commands, setCommands } from '../models/commands.js';
 
 const router = express.Router();
 
@@ -10,18 +10,13 @@ const getCommands = (req, res) => {
 const getCommand = (req, res) => {
   res.status(200).json(
     commands.find((command) => {
-      return req.params.name === command.name;
+      return req.params.name.toLowerCase() === command.name.toLowerCase();
     })
   );
 };
 
 const postCommands = (req, res) => {
-  req.body.forEach((command) => {
-    let index = commands.findIndex((c) => c.name === command.name);
-    if (index === -1) {
-      commands.push(command);
-    }
-  });
+  setCommands(req.body);
   res.status(201).json({ message: 'Commands have been posted' });
 };
 
