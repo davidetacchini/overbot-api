@@ -1,9 +1,9 @@
 import request from 'supertest';
 import app from '../index.js';
 
-// Using / api route but this cover all the routes
+// Using '/api' route but this cover all the routes
 describe('GET /api', () => {
-  it('return missing athentication', (done) => {
+  it('should require athentication', (done) => {
     request(app)
       .get('/api')
       .set('Accept', 'application/json')
