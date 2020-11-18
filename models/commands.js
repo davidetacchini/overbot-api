@@ -1,3 +1,7 @@
-const commands = [];
+let commands = [];
 
-export default commands;
+function setCommands(c) {
+  commands = c;
+}
+
+export { commands, setCommands };

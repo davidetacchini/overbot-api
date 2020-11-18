@@ -1,3 +1,7 @@
-const servers = [];
+let servers = [];
 
-export default servers;
+function setServers(s) {
+  servers = s;
+}
+
+export { servers, setServers };
