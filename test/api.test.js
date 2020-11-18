@@ -1,14 +1,11 @@
 import request from 'supertest';
-import app from '../index.js';
-import dotenv from 'dotenv';
-
-dotenv.config();
+import app, { secretToken } from '../index.js';
 
 describe('GET /api', () => {
   it('responds with "It\'s fucking working"', (done) => {
     request(app)
       .get('/api')
-      .set('Authorization', process.env.SECRET_ACCESS_TOKEN)
+      .set('Authorization', secretToken)
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(

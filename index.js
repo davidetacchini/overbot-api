@@ -1,12 +1,16 @@
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
+import dotenv from 'dotenv';
 import routes from './routes/index.js';
 import { notFound, errorHandler } from './middlewares/errors.js';
 import { authenticateToken } from './middlewares/auth.js';
 
+dotenv.config();
+
 const app = express();
 const port = process.env.PORT || 5000;
+export const secretToken = process.env.SECRET_ACCESS_TOKEN;
 
 app.use(morgan('dev'));
 app.use(cors());
@@ -26,3 +30,4 @@ app.listen(port, () => {
 });
 
 export default app;
+export { secretToken };
