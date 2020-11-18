@@ -1,7 +1,7 @@
 import request from 'supertest';
 import app from '../index.js';
 
-// Using '/api' route but this cover all the routes
+// Testing with '/api' route but it's the same for all the routes.
 describe('GET /api', () => {
   it('should require athentication', (done) => {
     request(app)
