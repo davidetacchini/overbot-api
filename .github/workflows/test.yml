@@ -21,3 +21,5 @@ jobs:
         run: npm ci
       - name: Test
         run: npm run test
+        env:
+          SECRET_ACCESS_TOKEN: '123456789' # Fake access token with testing purposes.
