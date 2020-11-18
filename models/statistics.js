@@ -1,7 +1,7 @@
-let statistics = {
-    bot: {},
-    host: {},
-    shards: {}
-}
+const statistics = {
+  bot: {},
+  host: {},
+  shards: {},
+};
 
-export default statistics
+export default statistics;

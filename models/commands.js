@@ -1,3 +1,3 @@
-let commands = []
+const commands = [];
 
-export default commands
+export default commands;

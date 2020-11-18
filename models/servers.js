@@ -1,3 +1,3 @@
-let servers = []
+const servers = [];
 
-export default servers
+export default servers;
