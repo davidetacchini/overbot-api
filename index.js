@@ -12,10 +12,6 @@ const app = express();
 const port = process.env.PORT || 5000;
 const secretToken = process.env.SECRET_ACCESS_TOKEN;
 
-app.get('/favicon.ico', (req, res) => {
-  res.status(204).end();
-});
-
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
