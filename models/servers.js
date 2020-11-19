@@ -1,7 +1,7 @@
 let servers = [];
 
-function setServers(s) {
+const setServers = (s) => {
   servers = s;
-}
+};
 
 export { servers, setServers };

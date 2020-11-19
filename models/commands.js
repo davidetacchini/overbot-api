@@ -1,7 +1,7 @@
 let commands = [];
 
-function setCommands(c) {
+const setCommands = (c) => {
   commands = c;
-}
+};
 
 export { commands, setCommands };
