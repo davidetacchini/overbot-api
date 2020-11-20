@@ -11,7 +11,7 @@ const postStatistics = (req, res) => {
   statistics.bot = req.body.bot;
   statistics.host = req.body.host;
   statistics.shards = req.body.shards;
-  res.status(201).json({ message: 'Statistics have been posted' });
+  res.status(201).json({ success: 'Statistics have been successfully posted' });
 };
 
 router.get('/', getStatistcs);

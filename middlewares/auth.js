@@ -7,9 +7,9 @@ export const authenticateToken = (req, res, next) => {
     if (token === secretToken) {
       next();
     } else {
-      res.status(403).json({ message: 'Forbidden.' });
+      res.status(403).json({ error: 'Wrong access token' });
     }
   } else {
-    res.status(401).json({ message: 'Missing authentication.' });
+    res.status(401).json({ error: 'Missing authentication token' });
   }
 };

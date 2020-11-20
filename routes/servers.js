@@ -17,7 +17,7 @@ const getServer = (req, res) => {
 
 const postServers = (req, res) => {
   setServers(req.body);
-  res.status(201).json({ message: 'Servers have been posted' });
+  res.status(201).json({ success: 'Servers have been successfully posted' });
 };
 
 router.get('/', getServers);

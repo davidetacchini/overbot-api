@@ -17,7 +17,7 @@ const getCommand = (req, res) => {
 
 const postCommands = (req, res) => {
   setCommands(req.body);
-  res.status(201).json({ message: 'Commands have been posted' });
+  res.status(201).json({ success: 'Commands have been successfully posted' });
 };
 
 router.get('/', getCommands);
