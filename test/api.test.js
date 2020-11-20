@@ -1,20 +1,15 @@
 import request from 'supertest';
 import app, { secretToken } from '../index.js';
+import { message } from '../routes/index.js';
 
 describe('GET /api', () => {
-  it('should respond with "It\'s fucking working"', (done) => {
+  it('should respond with a json object', (done) => {
     request(app)
       .get('/api')
       .set('Authorization', secretToken)
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(
-        200,
-        {
-          message: "It's fucking working",
-        },
-        done
-      );
+      .expect(200, message, done);
   });
 });
 

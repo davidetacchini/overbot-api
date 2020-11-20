@@ -11,7 +11,7 @@ describe('GET /api', () => {
       .expect(
         401,
         {
-          message: 'Missing authentication.',
+          error: 'Missing authentication token',
         },
         done
       );
@@ -28,7 +28,7 @@ describe('GET /api', () => {
       .expect(
         403,
         {
-          message: 'Forbidden.',
+          error: 'Wrong access token',
         },
         done
       );
