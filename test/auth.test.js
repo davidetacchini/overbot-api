@@ -19,7 +19,7 @@ describe('GET /api', () => {
 });
 
 describe('GET /api', () => {
-  it('return invalid token (forbidden)', (done) => {
+  it('should return invalid token (forbidden)', (done) => {
     request(app)
       .get('/api')
       .set('Accept', 'application/json')

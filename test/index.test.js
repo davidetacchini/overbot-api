@@ -2,7 +2,7 @@ import request from 'supertest';
 import app, { secretToken } from '../index.js';
 
 describe('app', () => {
-  it('responds with a not found message', (done) => {
+  it('should respond with a not found message', (done) => {
     request(app)
       .get('/give-me-four-o-four')
       .set('Authorization', secretToken)
@@ -13,7 +13,7 @@ describe('app', () => {
 });
 
 describe('GET /', () => {
-  it('responds with "Go to /api"', (done) => {
+  it('should respond with "Go to /api"', (done) => {
     request(app)
       .get('/')
       .set('Authorization', secretToken)

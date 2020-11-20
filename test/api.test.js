@@ -2,7 +2,7 @@ import request from 'supertest';
 import app, { secretToken } from '../index.js';
 
 describe('GET /api', () => {
-  it('responds with "It\'s fucking working"', (done) => {
+  it('should respond with "It\'s fucking working"', (done) => {
     request(app)
       .get('/api')
       .set('Authorization', secretToken)
