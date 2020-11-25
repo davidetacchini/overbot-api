@@ -1,7 +1,7 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "OverBot RESTful API",
+  "description": "Overcord RESTful API",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "Davide Tacchini",
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidetacchini/overbot-api.git"
+    "url": "https://github.com/davidetacchini/overcord-api.git"
   },
   "license": "ISC",
   "dependencies": {
