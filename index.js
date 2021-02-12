@@ -15,10 +15,14 @@ const secretToken = process.env.SECRET_ACCESS_TOKEN;
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
-app.use(authenticateToken);
 
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'Go to /api' });
+});
+
+// only use token for post requests
+app.post('*', (req, res, next) => {
+  authenticateToken(req, res, next);
 });
 
 app.use('/api', routes);

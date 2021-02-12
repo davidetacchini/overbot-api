@@ -1,4 +1,4 @@
-// No the best auth but it works.
+// best auth ever
 import { secretToken } from '../index.js';
 
 export const authenticateToken = (req, res, next) => {
