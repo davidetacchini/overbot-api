@@ -9,7 +9,7 @@ import { authenticateToken } from './middlewares/auth.js';
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 const secretToken = process.env.SECRET_ACCESS_TOKEN;
 
 app.use(morgan('dev'));
